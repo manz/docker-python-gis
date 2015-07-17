@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y libgeos-dev libgdal-dev \
 RUN curl -SL 'https://bootstrap.pypa.io/get-pip.py' | python2
 RUN pip install --upgrade pip==$PYTHON_PIP_VERSION
 
-RUN pip install gunicorn
+RUN pip install gunicorn mapnik==0.1
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
